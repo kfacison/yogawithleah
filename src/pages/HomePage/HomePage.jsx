@@ -34,6 +34,7 @@ export default function HomePage({ setUser }) {
         },
         body: JSON.stringify({ email }),
       });
+      console.log(response)
       if (response.ok) {
         setSubmitted(true);
       } else {
