@@ -28,7 +28,7 @@ export default function HomePage({ setUser }) {
     event.preventDefault();
     try {
       const response = await fetch('/api/subscribers', {
-        method: 'get',
+        method: 'post',
         headers: {
           'Content-Type': 'application/json',
         },
