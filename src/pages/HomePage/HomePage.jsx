@@ -27,7 +27,7 @@ export default function HomePage({ setUser }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch('/subscribers', {
+      const response = await fetch('/api/subscribers', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
