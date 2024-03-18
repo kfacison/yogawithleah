@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 const port = process.env.PORT || 3001;
 
 // API routes
-app.use('/subscribers', require('./routes/api/subscribers'));
+app.use('/api/subscribers', require('./routes/api/subscribers'));
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX/API requests
