@@ -2,6 +2,7 @@ const Subscriber = require('../../models/subscriber');
 
 module.exports = {
     create,
+    temp
 };
 
 async function create(req, res) {
@@ -17,5 +18,14 @@ async function create(req, res) {
     } catch (error) {
         console.error('Error creating subscriber:', error);
         res.status(500).json({ error: 'Internal server error' });
+    }
+}
+
+async function temp(req, res) {
+    try {
+        console.log(req.body);
+        res.json([])
+    } catch (error) {
+        console.log(error)
     }
 }

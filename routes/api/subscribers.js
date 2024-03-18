@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 // const Subscriber = require('../../models/subscriber');
-const { create } = require('../../controllers/api/subscribers');
+const { create,temp } = require('../../controllers/api/subscribers');
 
 // Handle POST request to /subscribers using the create function from the controller
 router.post('/', create);
+router.get('/', temp);
 
 // // Handle POST request to /subscribers
 // router.post('/', async (req, res) => {
