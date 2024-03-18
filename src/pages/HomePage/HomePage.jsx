@@ -28,13 +28,13 @@ export default function HomePage({ setUser }) {
     event.preventDefault();
     try {
       const response = await fetch('/api/subscribers', {
-        method: 'post',
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        // body: JSON.stringify({ email }),
+        body: JSON.stringify({ email }),
       });
-      console.log(response)
+      // console.log(response)
       if (response.ok) {
         setSubmitted(true);
       } else {
