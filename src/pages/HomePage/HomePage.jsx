@@ -33,6 +33,7 @@ export default function HomePage({ setUser }) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ email }),
+        allow:'POST'
       });
       // console.log(response)
       if (response.ok) {
