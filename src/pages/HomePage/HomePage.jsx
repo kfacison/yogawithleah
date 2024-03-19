@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, } from 'react';
 import backgroundImage from '../../images/new-ocean.png';
 import youTubeIcon from '../../images/youtube.png';
 import googleIcon from '../../images/google.png';
@@ -32,7 +32,7 @@ export default function HomePage({ setUser }) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email })
+        body: JSON.stringify({ email }),
       });
       // console.log(response)
       if (response.ok) {
@@ -134,7 +134,7 @@ export default function HomePage({ setUser }) {
             <h2 className="headline-brown">
               Sign-Up for Email Updates
             </h2>
-            <form onSubmit={handleSubmit} className="input">
+            <form action="/subscribers" method="POST" onSubmit={handleSubmit} className="input">
               <label htmlFor="email" className="text-brown">
                 See the live class schedule for the upcoming month and get notified of new videos and events!
               </label>
