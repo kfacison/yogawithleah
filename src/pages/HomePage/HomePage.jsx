@@ -32,8 +32,7 @@ export default function HomePage({ setUser }) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email }),
-        allow:'POST'
+        body: JSON.stringify({ email })
       });
       // console.log(response)
       if (response.ok) {
@@ -46,20 +45,20 @@ export default function HomePage({ setUser }) {
     }
   };
 
-  const handleEmailInput = useCallback(() => {
-    const getScheduleButton = document.getElementById('getSchedule');
-    const emailInput = document.getElementById('email');
-    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value);
-    getScheduleButton.disabled = !isValidEmail;
-  }, []);
+  // const handleEmailInput = useCallback(() => {
+  //   const getScheduleButton = document.getElementById('getSchedule');
+  //   const emailInput = document.getElementById('email');
+  //   const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value);
+  //   getScheduleButton.disabled = !isValidEmail;
+  // }, []);
 
-  useEffect(() => {
-    const emailInput = document.getElementById('email');
-    emailInput.addEventListener('input', handleEmailInput);
-    return () => {
-      emailInput.removeEventListener('input', handleEmailInput);
-    };
-  }, [handleEmailInput]);
+  // useEffect(() => {
+  //   const emailInput = document.getElementById('email');
+  //   emailInput.addEventListener('input', handleEmailInput);
+  //   return () => {
+  //     emailInput.removeEventListener('input', handleEmailInput);
+  //   };
+  // }, [handleEmailInput]);
 
   return (
     <main>
